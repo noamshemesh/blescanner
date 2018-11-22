@@ -18,10 +18,10 @@ client.on('connect', function () {
 
 setInterval(function () {  
   if ((new Date() - lastTime) <= 30000) {
-    client.publish('localtion/brian', 'home')
+    client.publish('location/brian', 'home')
     console.log('Brian is home')
   } else {
-    client.publish('localtion/brian', 'not_home')
+    client.publish('location/brian', 'not_home')
     console.log('Brian is away')
   }
 }, 10000)
